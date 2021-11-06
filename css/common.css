@@ -22,3 +22,9 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.gallery {
+  display: flex;
+}
+.gal-image:not(:first-child) {
+  margin-left: 10px;
+}
