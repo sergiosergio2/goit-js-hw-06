@@ -1,7 +1,7 @@
 const inputScrol = document.querySelector('#font-size-control');
 
 const mutableText = document.querySelector('#text');
-inputScrol.addEventListener('change', changesText);
+inputScrol.addEventListener('input', changesText);
 
 function changesText () {
    
