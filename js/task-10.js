@@ -13,7 +13,7 @@ createBtn.addEventListener('click', createBoxes, input.value);
 destroyBtn.addEventListener('click', removeBoxes);
 
 
-function removeBoxes() {
+function destroyBoxes() {
   const allBoxes = document.querySelectorAll('#boxes div');
   for (const box of allBoxes) {
     box.remove();
@@ -30,7 +30,7 @@ function createBoxes(event) {
     array.push(element);
   }
   console.log(array);
-  removeBoxes();
+  destroyBoxes();
   boxes.append(...array);
 }
 
