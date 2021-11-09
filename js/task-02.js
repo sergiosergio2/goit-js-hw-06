@@ -13,7 +13,7 @@ pushToElement("#ingredients", generateElements(ingredients))
 function generateElements(ingredients) {
   const newLis = [];
   for(let ing of ingredients) {
-    let newLi = document.createElement("li");//.innerHTML+=`<li>${ing}</li>`;
+    let newLi = document.createElement("li");
     newLi.textContent = ing;
     newLi.classList.add("item");
     newLis.push(newLi);
