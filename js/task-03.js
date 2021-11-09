@@ -18,15 +18,20 @@ const images = [
  
 // }
 // console.log(listEl);
-function itemGallery (images) {
-  const listEl = document.querySelector('.gallery');
+const listEl = document.querySelector('.gallery');
+pushGalleryItems(listEl, generateLis(images));
+
+
+function pushGalleryItems (gallery, htmlBlock) {
+  gallery.setAttribute('style', "display: flex; list-style-type: none;margin:auto; alighn-item:center;");
+  gallery.insertAdjacentHTML('beforeend', htmlBlock);
+  return;
+}
+
+function generateLis(images){
   let lineHtml = "";
   for (const image of images) {
-    lineHtml += `<li class= "gallery__item"> <img src="${image.url}" alt= "${image.alt}" width="450px"/></li>`;
-    
+    lineHtml += `<li class= "gallery__item"> <img src="${image.url}" alt= "${image.alt}" width="200px"/></li>`;
   }
-  listEl.setAttribute('style', "display: flex; list-style-type: none;");
-  listEl.insertAdjacentHTML('beforeend', lineHtml);
+  return lineHtml;
 }
-itemGallery(images);
-  
